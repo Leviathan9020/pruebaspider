@@ -1,0 +1,14 @@
+.fuente{
+    font-family: 'Architects Daughter', cursive;
+}
+
+.fondo{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 8%, rgba(235,13,44,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+.fondobanner{
+    background-image: url("img/spiderman10.png");
+    height: 400px;
+    background-attachment: fixed;
+}
