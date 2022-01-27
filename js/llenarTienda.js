@@ -6,7 +6,7 @@ export function llenarTienda(){
 
         {nombre:"comic spiderman",precio:201000,foto:"../img/1.jpg",descripcion:"edicion 1"},
         {nombre:"funko",precio:62000,foto:"../img/2.jpg",descripcion:"spiderman"},
-        {nombre:"comic spiderman",precio:17000,foto:"../img/3.jpg",descripcion:"la era del traje negro"},
+        {nombre:"comic spiderman",precio:17000,foto:"../img/3.png",descripcion:"la era del traje negro"},
         {nombre:"juego spierman ps5",precio:319000,foto:"../img/4.jpg",descripcion:"juego ps4 con miles morales"},
         {nombre:"juego spiderman ps4 1era edicion",precio:95000,foto:"../img/5.jpg",descripcion:"edicion 1 spiderman ps4"},
         {nombre:"gafas estilo tony stark",precio:587000,foto:"../img/6.jpg",descripcion:"gafas estilo tony stark"},
@@ -16,5 +16,67 @@ export function llenarTienda(){
         {nombre:"comic spiderman",precio:110000,foto:"../img/10.jpg",descripcion:"la muerte de gwen staicy"}
     ]
 
-    console.log(productos)
+    //Rutina para recorrer el arreglo y crear las tarjetas de producto 
+
+    //Crear una referencia a un elemento "PADRE " o "BASE" donde anclaremos los demas
+    let fila=document.getElementById("fila")
+
+    //2. Necesito recorrer un arreglo
+    productos.forEach(function(producto){
+
+        //CREAMOS LOS ELEMENTOS NECESARIOS PARA PINTAR LOS PRODUCTOS
+        let columna=document.createElement("div")
+        columna.classList.add("col")
+
+        let tarjeta=document.createElement("div")
+        tarjeta.classList.add("card")
+        tarjeta.classList.add("h-100")
+
+        let imagen=document.createElement("img")
+        imagen.classList.add("card-img-top")
+        imagen.classList.add("p-3")
+        imagen.classList.add("h-100")
+        imagen.src=producto.foto
+
+        let separador=document.createElement("hr")
+        separador.classList.add("w-50")
+        separador.classList.add("mx-auto")
+        separador.classList.add("d-block")
+
+
+       let nombre=document.createElement("h4")
+       nombre.classList.add("fw-bold")
+       nombre.classList.add("text-center")
+       nombre.classList.add("text-danger")
+       nombre.classList.add("mx-3")
+       nombre.textContent=producto.nombre
+
+       let precio=document.createElement("h6")
+       precio.classList.add("text-center")
+       precio.classList.add("text-danger")
+       precio.textContent="$"+producto.precio
+
+       let botonAmpliarinfo=document.createElement("button")
+       botonAmpliarinfo.setAttribute("type","button")
+       botonAmpliarinfo.classList.add("btn")
+       botonAmpliarinfo.classList.add("btn-outline-danger")
+       botonAmpliarinfo.classList.add("mx-3")
+       botonAmpliarinfo.classList.add("mb-3")
+       botonAmpliarinfo.textContent="Ver Producto"
+       
+       
+        //VAMOS A ANCLAR(PONER)(DISPONER)LAS ETIQUETAS
+        // QUE ACABAMOS DE CREAR EN NUESTRA BASE
+        tarjeta.appendChild(nombre)
+        tarjeta.appendChild(imagen)
+        tarjeta.appendChild(separador)
+        tarjeta.appendChild(precio)
+        tarjeta.appendChild(botonAmpliarinfo)
+        
+        
+        columna.appendChild(tarjeta)
+        fila.appendChild(columna)
+        
+    })
+
 }
