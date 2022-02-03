@@ -67,8 +67,9 @@ export function llenarTienda(){
        
         //VAMOS A ANCLAR(PONER)(DISPONER)LAS ETIQUETAS
         // QUE ACABAMOS DE CREAR EN NUESTRA BASE
-        tarjeta.appendChild(nombre)
+      
         tarjeta.appendChild(imagen)
+        tarjeta.appendChild(nombre)
         tarjeta.appendChild(separador)
         tarjeta.appendChild(precio)
         tarjeta.appendChild(botonAmpliarinfo)
