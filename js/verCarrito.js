@@ -26,7 +26,7 @@ export function verCarrito(carrito){
         let precioProducto=document.createElement("h6")
         precioProducto.textContent=producto.precio
         let cantidad=document.createElement("h6")
-        cantidad.textContent=producto.cantidad+" Und"
+        cantidad.textContent=producto.cantidad+"Und"
        
        
         //padres e hijos        
