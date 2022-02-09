@@ -19,14 +19,17 @@ export function verCarrito(carrito){
         let fotoProducto=document.createElement("img")
         fotoProducto.classList.add("img-fluid")
         fotoProducto.classList.add("w-100")
-        fotoProducto.src=producto.foto
+        fotoProducto.src=producto.foto       
 
         let nombreProducto=document.createElement("h3")
-        nombreProducto.textContent=producto.nombre        
+        nombreProducto.textContent=producto.nombre 
+              
+        let separador = document.createElement("hr")
+
         let precioProducto=document.createElement("h6")
         precioProducto.textContent=producto.precio
         let cantidad=document.createElement("h6")
-        cantidad.textContent=producto.cantidad+"Und"
+        cantidad.textContent=producto.cantidad+" Und"
        
        
         //padres e hijos        
@@ -38,9 +41,7 @@ export function verCarrito(carrito){
         fila.appendChild(columna2)
 
         
-        contenedor.appendChild(fila)
-
-        
+        contenedor.appendChild(fila)   
 
 
     })
@@ -48,5 +49,16 @@ export function verCarrito(carrito){
    
     modalVerCarrito.show()
 
+    //Se agrega boton limpiar    
+    let botonclear=document.getElementById("botonclear")
+    botonclear.addEventListener("click", function(){
+        contenedor.innerHTML=""
+        carrito.length = 0
+        let pildora=document.getElementById("pildora")
+        pildora.innerHTML=""
+  
+    })
+
+    
 
 }
