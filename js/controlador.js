@@ -16,7 +16,7 @@ llenarTienda()
 let Modalinfoproducto = new bootstrap.Modal(document.getElementById('Modalinfoproducto'))
 let listaProductros=document.getElementById("fila")
 listaProductros.addEventListener("click",function(event){
-  cantidaProducto=1
+  
 
    
     producto=ampliarInfoProducto(event)
@@ -24,12 +24,15 @@ listaProductros.addEventListener("click",function(event){
     Modalinfoproducto.show()
 
 })
-let cantidaProducto=document.getElementById("cantidadproducto").value
+
 
 //llamo a la funcion agregar al carrito
 let botonagregarCarrito=document.getElementById("agregarCarrito")
-botonagregarCarrito.addEventListener("click",function(){  
-  producto.cantidad=cantidaProducto
+botonagregarCarrito.addEventListener("click",function(){ 
+let cantidadProducto=document.getElementById("cantidadproducto").value
+producto.cantidad=cantidadProducto
+ 
+ 
     
   //agrego el producto al carrito
   carrito.push(producto)
@@ -37,6 +40,8 @@ botonagregarCarrito.addEventListener("click",function(){
 
   //oculto la modal de info producto
   Modalinfoproducto.hide()
+  let etiquetaCantidad=document.getElementById("cantidadproducto")
+    etiquetaCantidad.value=1
 
   //llamar la funcion agrgarCarrito
   agregarCarrito(carrito)

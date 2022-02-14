@@ -4,7 +4,11 @@ export function verCarrito(carrito){
     let contenedor=document.getElementById("contenedorCarrito")
     contenedor.innerHTML=""
 
+    let subtotales=[]
+
+
     carrito.forEach(function(producto){
+
         let fila=document.createElement("div")
         fila.classList.add("row")
 
@@ -26,23 +30,30 @@ export function verCarrito(carrito){
               
         let separador = document.createElement("hr")
 
-        let precioProducto=document.createElement("h6")
+        let subtotal = document.createElement("h5")
+        subtotal.textContent="Subtotal: "+ producto.cantidad * producto.precio.slice(1)
+        
+
+        let precioProducto=document.createElement("h4")
         precioProducto.textContent=producto.precio
         let cantidad=document.createElement("h6")
         cantidad.textContent=producto.cantidad+" Und"
        
        
+       
         //padres e hijos        
         columna1.appendChild(fotoProducto)
-        columna2.appendChild(nombreProducto)
+        columna1.appendChild(separador)
+        columna2.appendChild(nombreProducto)        
         columna2.appendChild(precioProducto)
+        columna2.appendChild(subtotal)
         columna2.appendChild(cantidad)
         fila.appendChild(columna1)
         fila.appendChild(columna2)
 
         
         contenedor.appendChild(fila)   
-
+        subtotales.push( producto.cantidad * producto.precio.slice(1))
 
     })
 
@@ -60,5 +71,23 @@ export function verCarrito(carrito){
     })
 
     
+    let total = 0
+    subtotales.forEach(subtotal=>{
+        total=total+subtotal
+    })
+
+    let todo = document.getElementById("Total")
+    todo.textContent="total: "+total
+
+    //aqui voy hacer el boton de convesion a usd
+
+    let botonconversion = document.getElementById("botonconversion")
+    botonconversion.addEventListener("click", function(){
+        total = total * 0.00025 
+
+        todo.textContent = "total: $" + total 
+    },{once:true})
+
 
 }
+

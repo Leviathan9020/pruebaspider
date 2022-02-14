@@ -31,7 +31,7 @@
                         </li>                   
                     </ul>
                     <form class="d-flex">                        
-                        <button class="btn btn-dark" type="button" id="botonCarrito"><i class="fas fa-cart-arrow-down fa-2x" ></i></button>
+                        <button class="btn btn-danger" type="button" id="botonCarrito"><i class="fa-solid fa-cart-shopping fa"></i></button>
                         <span  id="pildora" class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
                           99+
                          
@@ -53,9 +53,9 @@
 <div class="modal fade" id="Modalinfoproducto" >
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header bg-white">
+        <div class="modal-header bg-danger text-white">
           <h5 class="modal-title">Tienda Spiderman</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="con">
@@ -66,7 +66,7 @@
                   <div class="col-12 col-md-8 p-3">
                     <h5 id="nombreProducto">NOMBRE DEL PRODUCTO</h5>
                     <h5 id="precioProducto">$201000</h5>
-                    <h6 id="descripcionProducto">Lorem ipsum dolor sit amet consectetur</h6>
+                    <h6 id="descripcionProducto">Comic Asombroso Spiderman</h6>
                     <div class="mb-3">
                         <label class="form-label">cantidad</label>
                         <input type="number" class="form-control" id="cantidadproducto" value="1" min="0">
@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-danger" id="agregarCarrito">Buy</button>
         </div>
       </div>
@@ -86,20 +86,31 @@
 <div class="modal fade" id="modalvercarrito">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-danger text-white">
         <h5 class="modal-title">Shop Spiderman</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h4 id="Mensajelogin"></h4>
+
+            </div>
+
+          </div>
+        </div>
         <div class="container" id="contenedorCarrito">          
         </div>
         <hr>
-          <h4 id="Total">Total:</h4>          
+          <h4 id="Total">Total</h4> 
+                 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger" id="botonclear">Clear</button>
-        <button type="button" class="btn btn-danger">Buy</button>        
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="botonclear">Clear</button>
+        <button type="button" class="btn btn-danger">Buy</button>  
+        <button class="btn btn-danger" id="botonconversion" >Convertir a Usd</button>       
       </div>
     </div>
   </div>
@@ -111,13 +122,14 @@
           <div class="row">
             <div class="col-12 col-md-7">
               <p>Medios de pago</p> 
+              <img src="../img/bancos.png" alt="">
+              <!--<i class="icono2 fab fa-cc-visa fa-2x p-3"></i>
               <i class="icono1 fab fa-cc-amex fa-2x p-3"></i>
-              <i class="icono2 fab fa-cc-visa fa-2x p-3"></i>
               <i class="icono3 fab fa-cc-mastercard fa-2x p-3"></i>
               <i class="icono4 fab fa-cc-paypal fa-2x p-3"></i>
               <i class="icono5 fab fa-cc-diners-club fa-2x p-3"></i>
               <i class="icono6 fab fa-cc-amazon-pay fa-2x p-3"></i>            
-              <i class="icono7 fab fa-paypal fa-2x p-3"></i>              
+              <i class="icono7  fa-2x p-3"></i>-->              
             </div>
             <div class="col-12 col-md-16">
               <hr>

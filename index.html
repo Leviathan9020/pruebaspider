@@ -44,15 +44,11 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                
+
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">                        
-                        <button class="btn btn-danger" type="submit"><i
-                                class="fas fa-cart-arrow-down fa-2x"></i></button>
 
-                    </form>
                 </div>
             </div>
         </nav>
@@ -103,31 +99,53 @@
         <section>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
                 aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
+                <div class="offcanvas-header bg-danger text-white">
                     <h5 class="offcanvas-title" id="offcanvasExampleLabel">
                         Sign up</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    <button type="button" class="btn-close text-reset btn-light" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                    <div>
-                        Aqui puedes registrarte o puedes acceder a la TIenda.
-                    </div>
-                    <div class="dropdown mt-3">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-bs-toggle="dropdown">
-                            click here
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="./views/shop.html">Shop</a></li>
-                            <li><a class="dropdown-item" href="./views/about.html">About</a></li>
-                            <li><a class="dropdown-item" href="./registromenu.html">Sing Up</a></li>
-                        </ul>
+                <div class="offcanvas-body bg-dark text-white">
+                    <div class="container">
+                        <img src="img/gifspider.webp" alt="spider gift" class="w-100 img-fluid">
+                        <form class="d-flex flex-column">
+
+                            <div class="mb-3">
+
+                                <label class="form-label m-2">Imail</label>
+                                <div class="input-wrapper">
+                                    <input type="imail" class="form-control" id="cajaemail" placeholder="Email">
+                                    <i class="fa-solid fa-envelope input-icon"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+
+                                <div class="input-wrapper">
+                                    <input type="password" class="form-control" id="cajapassword"
+                                        placeholder="Password">
+                                    <i class="fa-solid fa-lock input-icon"></i>
+
+                                </div>
+
+                            </div>
+                            <a href="#" class="link-info">Forgot Your Password?</a>
+                            <div class="d-flex mt-3">
+                                <button type="submit" class="btn btn-danger w-50 me-3"
+                                    id="botonregistro">Registrate</button>
+                                <button type="submit" class="btn btn-danger w-50 " id="botonLogin">login</button>
+
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
-        </section>
+
         <section>
 
             <section class="my-5 padding-5 animate__animated  animate animate animate__rubberBand wow">
@@ -195,8 +213,62 @@
                     <img src="img/No_way_home_logo.png" alt="spiderman" class="img-fluid w-100 m-3">
                 </div>
             </section>
-            <section class="fondobanner"></section>
+
+            <section>
+               
+                <!-- Modal -->
+                <div class="modal fade" id="modalInicio">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-dark text-white">
+                            <div class="modal-header bg-danger text-white">
+                                <h5 class="modal-title" id="exampleModalLabel">Inicio</h5>
+                                <button type="button" class="btn-close btn-light" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4 id="mensajeInicio"></h4>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modallogin">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-dark text-white">
+                            <div class="modal-header bg-danger text-white">
+                                <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+                                <button type="button" class="btn-close btn-light" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                             <!-- Modal -->
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4 id="mensajelogin"></h4>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
     </main>
+
+
 
     <footer class="bg-dark mt-4 p-3 text-white">
         <div class="container">
@@ -207,9 +279,13 @@
                 </div>
                 <div class="col-12 col-md-4">
                     <p>Jomar Restrepo Desarrollador en Proceso</p>
-                    <i class="fab fa-facebook-square fa-2x p-3"></i>
-                    <i class="fab fa-instagram fa-2x p-3"></i>
-                    <i class="fab fa-twitter fa-2x p-3"></i>
+                    <a class="text-white" href="https://www.facebook.com/jomar.restrepo/"><i
+                            class="fab fa-facebook-square fa-1x p-3"></i></a>
+                    <a class="text-white" href="https://www.instagram.com/jomar2030/"><i
+                            class="fab fa-instagram fa-1x p-3"></i></a>
+                    <a class="text-white"><i class="fab fa-twitter fa-1x p-3"></i></a>
+                    <a class="text-white"><i class="fa-brands fa-discord fa-1x p-3"></i></a>
+
                 </div>
                 <div class="col-12 col-md-4">
                     <p>&copy; Jomar Restrepo <b>Globant</b> Derechos Resevados</p>
@@ -227,6 +303,9 @@
         new WOW().init();
     </script>
     <script src="https://kit.fontawesome.com/b79963810d.js" crossorigin="anonymous"></script>
+    <script src="js/firebase.js" type="module"></script>
+    <script src="js/registrarusuario.js" type="module"></script>
+
 
 </body>
 

@@ -15,3 +15,18 @@ h2{
     color:#e30052
 }
 
+.input-wrapper {
+	position: relative;
+	width: 271px;
+}
+
+.input-icon {
+	color: #a9a9a9;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
